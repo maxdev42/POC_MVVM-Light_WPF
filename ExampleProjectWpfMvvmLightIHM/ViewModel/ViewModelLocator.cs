@@ -1,4 +1,5 @@
 using CommonServiceLocator;
+using ExampleProjectWpfMvvmLightIHM.Model;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Ioc;
 
@@ -13,8 +14,7 @@ namespace ExampleProjectWpfMvvmLightIHM.ViewModel
             ServiceLocator.SetLocatorProvider(() => SimpleIoc.Default);
 
             SimpleIoc.Default.Register<MainViewModel>();
-            SimpleIoc.Default.Register<EnvironmentViewModel>();
-            SimpleIoc.Default.Register<DatabaseViewModel>();
+            SimpleIoc.Default.Register<PairValueViewModel>();
         }
 
         public MainViewModel Main
@@ -25,19 +25,11 @@ namespace ExampleProjectWpfMvvmLightIHM.ViewModel
             }
         }
 
-        public EnvironmentViewModel Environment
+        public PairValueViewModel PairValues
         {
             get
             {
-                return ServiceLocator.Current.GetInstance<EnvironmentViewModel>();
-            }
-        }
-
-        public DatabaseViewModel Database
-        {
-            get
-            {
-                return ServiceLocator.Current.GetInstance<DatabaseViewModel>();
+                return ServiceLocator.Current.GetInstance<PairValueViewModel>();
             }
         }
 

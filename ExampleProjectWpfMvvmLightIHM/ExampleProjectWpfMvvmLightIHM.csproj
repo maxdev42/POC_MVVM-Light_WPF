@@ -78,8 +78,8 @@
     </ApplicationDefinition>
     <Compile Include="Model\DatabaseModel.cs" />
     <Compile Include="Model\EnvironmentModel.cs" />
-    <Compile Include="ViewModel\DatabaseViewModel.cs" />
-    <Compile Include="ViewModel\EnvironmentViewModel.cs" />
+    <Compile Include="Model\PairValue.cs" />
+    <Compile Include="ViewModel\PairValueViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
     <Page Include="MainWindow.xaml">

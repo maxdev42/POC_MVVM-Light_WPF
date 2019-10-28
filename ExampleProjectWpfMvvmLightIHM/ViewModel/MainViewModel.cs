@@ -8,7 +8,6 @@ namespace ExampleProjectWpfMvvmLightIHM.ViewModel
 
     public class MainViewModel : ViewModelBase
     {
-
         public MainViewModel()
         {
             LeaveApplicationCommand = new RelayCommand(LeaveApplication);
@@ -20,7 +19,5 @@ namespace ExampleProjectWpfMvvmLightIHM.ViewModel
         {
             Environment.Exit(1);
         }
-
-
     }
 }
