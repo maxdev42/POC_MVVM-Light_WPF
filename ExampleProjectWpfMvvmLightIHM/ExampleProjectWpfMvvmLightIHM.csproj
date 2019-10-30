@@ -76,6 +76,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Commons\DirectoryManager.cs" />
     <Compile Include="Model\DatabaseModel.cs" />
     <Compile Include="Model\EnvironmentModel.cs" />
     <Compile Include="Model\PairValue.cs" />

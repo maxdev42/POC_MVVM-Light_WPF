@@ -1,4 +1,5 @@
-﻿using GalaSoft.MvvmLight;
+﻿using ExampleProjectWpfMvvmLightIHM.Commons;
+using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
 using System;
 using System.Collections.Generic;
@@ -99,12 +100,14 @@ namespace ExampleProjectWpfMvvmLightIHM.Model
             
             AddPairValueCommand = new RelayCommand(AddPairValue);
             RemovePairValueCommand = new RelayCommand<int>(RemovePairValue);
+            ExportPairValueToCsvCommand = new RelayCommand<int>(ExportPairValueToCsv);
         }
 
 
         // Commandes
         public ICommand AddPairValueCommand { get; set; }
         public ICommand RemovePairValueCommand { get; set; }
+        public ICommand ExportPairValueToCsvCommand { get; set; }
 
         // COmmandes implementations
         public void AddPairValue()
@@ -119,6 +122,11 @@ namespace ExampleProjectWpfMvvmLightIHM.Model
         public void RemovePairValue(int index)
         {
             pairValuesList.RemoveAt(index);
+        }
+
+        public void ExportPairValueToCsv(int index)
+        {
+            DirectoryManager.CreateAndWriteContentInCsvFile(@"C:\Users\maxen_xkerrno\OneDrive\Bureau\test.csv", pairValuesList);
         }
     }
 }

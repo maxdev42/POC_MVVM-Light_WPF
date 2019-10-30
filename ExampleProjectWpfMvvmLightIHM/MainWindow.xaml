@@ -38,7 +38,7 @@
         </DataGrid>
 
         <Button Content="Quitter" HorizontalAlignment="Left" Margin="719,636,0,0" VerticalAlignment="Top" Width="150" Height="30" Style="{StaticResource MaterialDesignRaisedDarkButton}" Command="{Binding LeaveApplicationCommand}" DataContext="{Binding Main, Source={StaticResource Locator}}"/>
-        <Button Content="Valider" HorizontalAlignment="Left" Margin="900,636,0,0" VerticalAlignment="Top" Width="150" Height="30" Style="{StaticResource MaterialDesignRaisedAccentButton}"/>
+        <Button Content="Valider" HorizontalAlignment="Left" Margin="900,636,0,0" VerticalAlignment="Top" Width="150" Height="30" Style="{StaticResource MaterialDesignRaisedAccentButton}" Command="{Binding ExportPairValueToCsvCommand}" DataContext="{Binding PairValues, Source={StaticResource Locator}}"/>
 
 
     </Grid>

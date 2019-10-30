@@ -28,7 +28,7 @@ namespace ExampleProjectWpfMvvmLightIHM.Model
 
         public override string ToString()
         {
-            return EnvironmentValue + " " + DatabaseValue;
+            return EnvironmentValue + ";" + DatabaseValue;
         }
 
     }
